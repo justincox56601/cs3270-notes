@@ -64,7 +64,7 @@
  * MANAGING VARIABLES
  * there are several helpful methods for working with variables
  * isset() - returns true if a variable has ben set
- * empty() - returns true if a varaible is empty (this include empty string, 0, and '0')
+ * empty() - returns true if a varaible is empty (this includes empty string, 0, and '0')
  * is_bool() - returns true if a variable is TRUE or FALSE
  * is_callable() - returns true if the variable is a method or an object
  * is_double(), is_float(), is_real() - returns true if the method is a floating point number
@@ -77,12 +77,11 @@
  * unset() - destroys a varaible
  */
 
- $dog = 'fido';
- echo $dog . PHP_EOL;
- unset($dog);
- echo $dog . PHP_EOL;
- echo is_null($dog) . PHP_EOL;
- echo empty($dog) . PHP_EOL;
+//EXERCISE: play with the above methods. what happens if you use empty() on a variable that 
+//doesn't exist?  what if the value is NULL?  does is_double() work on integers?  does it
+//coerce ints to floats? what about is_real()?  Does is_numeric() work on binary?  Does
+//is_null() always produce the same output as empty().  What about AFTER you use the unset() 
+//method?
 
 
 
