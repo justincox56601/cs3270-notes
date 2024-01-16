@@ -28,12 +28,25 @@
  * program. using the define function does the same thing.  Global is for variables
  * and define is for constants.  
  * 
+ * Super Globals: these are built in and always available
+ * $GLOBALS - array of all global variables
+ * $_SERVER - array of server variables such as REMOTE_ADDRR
+ * $_GET - form variables passed via GET method
+ * $_POST - form variables passed via POST method
+ * $_COOKIE - HTTP cookie variables
+ * $_FILES - contains variables passed to the script via HTTP post file uploads
+ * $_ENV - environment variables
+ * $_REQUEST - merge of the $_GET, $_POST, and $_COOKIE variables
+ * $_SESSION - HTTP variables requested by the session module (similar to cookies)
+ * 
  * constants CANNOT be changed and should be upper cased.  Notice, the constant
  * below does not have the $ prefix.
  * 
  * notice that the declaration of the global $user and the definition of $user are
  * not on the same line.  Why did I not do it all on the same line?
  */
+
+//exerise: print out some of the super variables. see anything interesting?
 
 // global $user;
 // $user = [
@@ -46,6 +59,32 @@
 
 // echo URL_ROOT . PHP_EOL;
 // print_r($user)
+
+/**
+ * MANAGING VARIABLES
+ * there are several helpful methods for working with variables
+ * isset() - returns true if a variable has ben set
+ * empty() - returns true if a varaible is empty (this include empty string, 0, and '0')
+ * is_bool() - returns true if a variable is TRUE or FALSE
+ * is_callable() - returns true if the variable is a method or an object
+ * is_double(), is_float(), is_real() - returns true if the method is a floating point number
+ * is_int(), is_integer(), is_long() - returns true if the method is an integer
+ * is_null() - returns true if the variable has a null value.  NOT the same as empty
+ * is_numeric() - returns true if the variable is a number or a number string
+ * is_object() - returns true if the variable is an object
+ * is_resource() - returns true if the variable is a resource
+ * is_string() - returns true if the variable is a string
+ * unset() - destroys a varaible
+ */
+
+ $dog = 'fido';
+ echo $dog . PHP_EOL;
+ unset($dog);
+ echo $dog . PHP_EOL;
+ echo is_null($dog) . PHP_EOL;
+ echo empty($dog) . PHP_EOL;
+
+
 
 /**
  * REFERENCE
