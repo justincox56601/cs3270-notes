@@ -47,9 +47,10 @@
  */
 
 //exerise: print out some of the super variables. see anything interesting?
+//print_r( $_SERVER);
 
 // global $user;
-// $user = [
+// $global = [
 // '_id' => 142345,
 // 'firstName' => 'John',
 // 'lastName' => 'Doe',
