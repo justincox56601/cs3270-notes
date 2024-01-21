@@ -61,7 +61,7 @@
 // echo gettype([1, 2, 3]) . PHP_EOL;                  //Array
 // echo gettype($foo) . PHP_EOL;                       //Object
 // echo gettype(CardSuits::HEARTS) . PHP_EOL;          //Enumerations
-// echo gettype(NULL) . PHP_EOL;                       // NULL
+// echo gettype(NULL) . PHP_EOL;                      // NULL
 
 
 /**
@@ -85,8 +85,8 @@
 //  echo 'this works' . PHP_EOL;
 //                             echo 'So does this' . PHP_EOL;
 //  echo 'This might work...? '; echo 'Yup this works too! '; echo 'Look!  I can keep doing it too as long as I teminate each statement with a ; '. PHP_EOL; 
- //echo 'But this does not work.  It will throw an error ... wait what!?!? '
- //echo 'What if I do this?';
+//  echo 'But this does not work.  It will throw an error ... wait what!?!? ';
+//  echo 'What if I do this?';
 
 /**
  * Code blocks are all enclosed in { }
@@ -114,12 +114,12 @@
 // $Name = 'Justin 2'; //this works too and is technically a different variable;
 // $_name = 'Justin 3'; //This will also work
 // $_ = 'Justin 4'; //this even works
-// $1 = 'Justin 5'; //this is trash don't do this.  it will crash
+//$1 = 'Justin 5'; //this is trash don't do this.  it will crash
 // echo $name . PHP_EOL;
 // echo $Name . PHP_EOL;
 // echo $_name . PHP_EOL;
 // echo $_ . PHP_EOL;
-// echo $1 . PHP_EOL;
+//echo $1 . PHP_EOL;
 
 /**
  * Naming Conventions
@@ -176,7 +176,7 @@
 //     //this function technically could do the same as set_class_size but I have no idea
 //     //unless I look at the code in the function to see what it is doing.
 //     //Don't do this.
-// } 
+//} 
 
 /**
  * Docstrings in PHP start with /** and end with * /
@@ -244,21 +244,21 @@
  * printf() - for printing f strings
  */
 
-//  $message = "This seems like a really cool message";
-//  $fib = [0,1,1,2,3,5,8,13];
-//  $associatedArray = ['color'=>"blue", "make"=>'Ford', 'Model'=>'Mustang'];
-//  $when ='tomrrow';
-//  $time = 1;
+ $message = "This seems like a really cool message";
+ $fib = [0,1,1,2,3,5,8,13];
+ $associatedArray = ['color'=>"blue", "make"=>'Ford', 'Model'=>'Mustang'];
+ $when ='tomrrow';
+ $time = 1;
 
-//  echo $message . PHP_EOL;  //echo doesn't need parenthases
-//  echo($message . PHP_EOL); //But it can use them
-//  echo $message, $when, $time, PHP_EOL; //echo can even take a comma separated list of arguments
+ echo $message . PHP_EOL;  //echo doesn't need parenthases
+ echo($message . PHP_EOL); //But it can use them
+ echo $message, $when, $time, PHP_EOL; //echo can even take a comma separated list of arguments
 
-//  print($message . PHP_EOL); //Print needs parenthases
+ print($message . PHP_EOL); //Print needs parenthases
 
-//  //echo $fib;
-//  print_r($fib); //print_r is for printing out arrays
-//  print_r($associatedArray);
+ //echo $fib;
+ print_r($fib); //print_r is for printing out arrays
+ print_r($associatedArray);
 
-//  printf('what are you doing %s at %.u', $when, $time);  //printf is for fstrings
+ printf('what are you doing %s at %.u', $when, $time);  //printf is for fstrings
 ?>

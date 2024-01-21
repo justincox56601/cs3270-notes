@@ -52,6 +52,16 @@
  * jump in with whatever they are already doing.
  * 
  * start by creating a new folder called src, everything accept index.php, style.css, and script.js, and
- * some config items, will go in here from now on and we will want to import those files.
+ * some config items, will go in here from now on and we will want to import those files.  For the sake of 
+ * keeping everyone on the same page, lets go ahead and make 3 new folders inside of the src folder.
+ * views, controllers, models
+ * 
+ * Next, lets take a look at our first page.  lets pull out EVERYTHING that is content and put it into a $data associative array.  
+ * what we have left should be basically html template.  This HTML markup is what we can put into our views.  SO make a new file
+ * in the views directory called header.view.php. and in there lets place all of our header markup.
+ * 
+ * once that is done, we can remove the header from our home page, and use the include_once() method to include the header
+ * template into our current page.  Once we have that done, lets look to see where else we can refactor code to make our pages
+ * cleaner.
  */
 ?>
