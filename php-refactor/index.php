@@ -1,5 +1,6 @@
 <?php
-define('URL_ROOT', 'localhost:3000');
+define('URL_ROOT', 'http://localhost:3000');
+define('APP_ROOT', dirname(__DIR__));
 
 	$data = [
 		'pageTitle' => 'Home',
@@ -35,7 +36,7 @@ include_once('src/views/head.view.php');
 <main>
 	<?php foreach($data['articles'] as $article){ ?>
 		<article>
-			<img src="<?php echo $article['img']['src']?>" alt="<?php echo $article['img']['alt']?>">
+			<img src="<?php echo URL_ROOT . '/media/' . $article['img']['src']?>" alt="<?php echo $article['img']['alt']?>">
 			<div>
 				<h2 class="article-tite"><?php echo $article['title']?></h2>
 				<div class="article-meta">
