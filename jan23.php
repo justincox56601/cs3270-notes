@@ -58,7 +58,10 @@
 // $c = 4;
 // $d = ++$c;
 
-// echo $a, $b, $c, $d;
+// echo $a, $b, $c, $d, PHP_EOL;
+// for($i=0; $i<5; ++$i){
+//     echo $i, PHP_EOL;
+// }
 
 /**
  * COMPARISON OPERATORS
