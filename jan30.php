@@ -65,12 +65,41 @@ $str2 = "     hello     ";
    * implode(string: $separator, array $array):string - joins an array together using the separator
    */
 
-   $strWords = 'We will we will rock you';
-   $strArry = ['We', 'will', 'we', 'will', 'rock', 'you'];
-   print_r(str_split($strWords)); //
-   print_r(str_split($strWords, 1)); //default size
-   print_r(str_split($strWords, 4)); //4 charactes per word
-   print_r(explode(" ", $strWords));
-   echo implode(" ", $strArry), PHP_EOL;
+  //  $strWords = 'We will we will rock you';
+  //  $strArry = ['We', 'will', 'we', 'will', 'rock', 'you'];
+  //  print_r(str_split($strWords)); //
+  //  print_r(str_split($strWords, 1)); //default size
+  //  print_r(str_split($strWords, 4)); //4 charactes per word
+  //  print_r(explode(" ", $strWords));
+  //  echo implode(" ", $strArry), PHP_EOL;
+
+  /**
+   * str_replace(
+   *  array | string $serach,
+   *  array | string $replace,
+   *  array | string $subject,
+   * [int &$count = null]
+   * )array | string
+   * 
+   * the string replace method searches for the $search inside of the $subject and replaces it with the $replace.  The optional count paramater is for how many times you want this to happen.  the default is null.  This method is CASE SENSITIVE
+   * 
+   * str_ireplace() - is the same method but NOT case sensitive
+   */
+
+  //  $search = 'needle';
+  //  $replace = 'HERE';
+  //  $subject = "This method id like trying to find a needle in a haystack.  However NEEDLE and needle aren't always the same thing.";
+  //  $count = 1;
+
+  //  echo str_replace($search, $replace, $subject), PHP_EOL; // standard usaeage - notice how it doesn't replace NEEDLE
+  //  echo str_replace($search, $replace, $subject, $count), PHP_EOL; // passing in the option count to only change the first occurrence of needle.  count HAS to be passed by reference.
+  //  echo str_ireplace($search, $replace, $subject), PHP_EOL; // notice how it changed both the lower case and uppercase needles
+
+   //remove vowels
+  //  $vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  //  $replace = '_';
+  //  $subject = "The quick brown fox jumps over the lazy dog.";
+  //  echo str_replace($vowels, $replace, $subject), PHP_EOL;
+
 
 ?>

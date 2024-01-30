@@ -45,7 +45,7 @@
   
 //  }
 
-//  equivalent('hello', 'Hello');
+//  equivalent(1.0, true);
 
 /**
  * FORMATTING STRINGS
@@ -67,45 +67,45 @@
 //  $s = sprintf("The value of pi to 5 decimals is %.5f" . PHP_EOL, $pi);
 //  echo 'echo s: ', $s, PHP_EOL;
 
-//  printf("there are 15 spaces between these %-15s %s", "two", "words");
-//  echo PHP_EOL;
+ printf("there are 15 spaces between these %-15s %s", "two", "words");
+ echo PHP_EOL;
 
-//  $data = [
-//     ["fName" => 'Brock', 'lName' => 'Rockson', 'grade'=>'A'],
-//     ["fName" => 'Misty', 'lName' => 'Watersen', 'grade'=>'B'],
-//     ["fName" => 'Lt', 'lName' => 'Surge', 'grade'=>'C'],
-//     ["fName" => 'Erica', 'lName' => 'Lilly', 'grade'=>'A'],
-//     ["fName" => 'Sabrina', 'lName' => 'Psi', 'grade'=>'B+'],
-//  ];
+ $data = [
+    ["fName" => 'Brock', 'lName' => 'Rockson', 'grade'=>'A'],
+    ["fName" => 'Misty', 'lName' => 'Watersen', 'grade'=>'B'],
+    ["fName" => 'Lt', 'lName' => 'Surge', 'grade'=>'C'],
+    ["fName" => 'Erica', 'lName' => 'Lilly', 'grade'=>'A'],
+    ["fName" => 'Sabrina', 'lName' => 'Psi', 'grade'=>'B+'],
+ ];
 
-//  function print_grades(string $fName, string $lName, string $grade):void{
-//     printf("%-20s%-20s%-20s", $fName, $lName, $grade);
-//     echo PHP_EOL;
-//  }
+ function print_grades(string $fName, string $lName, string $grade):void{
+    printf("%-20s%-20s%-20s", $fName, $lName, $grade);
+    echo PHP_EOL;
+ }
 
-//  print_grades('First Name', 'Last Name', 'Grade');
-//  foreach($data as $d){
-//     print_grades($d['fName'], $d['lName'], $d['grade']);
-//  }
+ print_grades('First Name', 'Last Name', 'Grade');
+ foreach($data as $d){
+    print_grades($d['fName'], $d['lName'], $d['grade']);
+ }
 
-//  printf("I am going to pad %05d with zeros to make sure it is 5 digits long", 131);
-//  echo PHP_EOL;
-//  printf("Or maybe I pad %'.8s with periods to make sure it is 8 charracters long", 131);
-//  echo PHP_EOL;
+ printf("I am going to pad %05d with zeros to make sure it is 5 digits long", 131);
+ echo PHP_EOL;
+ printf("Or maybe I pad %'.8s with periods to make sure it is 8 charracters long", 131);
+ echo PHP_EOL;
 
-//  $myNum = 1808957.561432;
+ $myNum = 1808957.561432;
 
-//  //as a whole number
-//  echo 'As a whole number: ', number_format($myNum), PHP_EOL;
+ //as a whole number
+ echo 'As a whole number: ', number_format($myNum), PHP_EOL;
 
-//  //with decimals
-//  echo 'with decimals: ', number_format($myNum, 2), PHP_EOL;
-//  echo 'with decimals: ', number_format($myNum, 4), PHP_EOL;
+ //with decimals
+ echo 'with decimals: ', number_format($myNum, 2), PHP_EOL;
+ echo 'with decimals: ', number_format($myNum, 4), PHP_EOL;
 
-//  //changing the decimal point
-//  echo 'changing the decimal point: ', number_format($myNum, 2, '-'), PHP_EOL;
+ //changing the decimal point
+ echo 'changing the decimal point: ', number_format($myNum, 2, '-'), PHP_EOL;
 
-//  //changing the  thousands separator
-//  echo 'changing the  thousands separator: ', number_format($myNum, 2, '-', '#'), PHP_EOL;
+ //changing the  thousands separator
+ echo 'changing the  thousands separator: ', number_format($myNum, 2, '-', '#'), PHP_EOL;
  
 ?>
