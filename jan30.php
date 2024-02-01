@@ -12,9 +12,9 @@
  * 
  */
 
-$str = "     hello";
-$str1 = 'hello';
-$str2 = "     hello     ";
+// $str = "     hello";
+// $str1 = 'hello';
+// $str2 = "     hello     ";
 // echo strlen($str), PHP_EOL; //this equals 10
 // echo strlen($str1), PHP_EOL; //this equals 5
 // echo strlen($str2), PHP_EOL; //this equals 15
@@ -86,20 +86,20 @@ $str2 = "     hello     ";
    * str_ireplace() - is the same method but NOT case sensitive
    */
 
-  //  $search = 'needle';
-  //  $replace = 'HERE';
-  //  $subject = "This method id like trying to find a needle in a haystack.  However NEEDLE and needle aren't always the same thing.";
-  //  $count = 1;
+   $search = 'needle';
+   $replace = 'HERE';
+   $subject = "This method id like trying to find a needle in a haystack.  However NEEDLE and needle aren't always the same thing.";
+   $count = 1;
 
-  //  echo str_replace($search, $replace, $subject), PHP_EOL; // standard usaeage - notice how it doesn't replace NEEDLE
-  //  echo str_replace($search, $replace, $subject, $count), PHP_EOL; // passing in the option count to only change the first occurrence of needle.  count HAS to be passed by reference.
-  //  echo str_ireplace($search, $replace, $subject), PHP_EOL; // notice how it changed both the lower case and uppercase needles
+   echo str_replace($search, $replace, $subject), PHP_EOL; // standard usaeage - notice how it doesn't replace NEEDLE
+   echo str_replace($search, $replace, $subject, $count), PHP_EOL; // passing in the option count to only change the first occurrence of needle.  count HAS to be passed by reference.
+   echo str_ireplace($search, $replace, $subject), PHP_EOL; // notice how it changed both the lower case and uppercase needles
 
    //remove vowels
-  //  $vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
-  //  $replace = '_';
-  //  $subject = "The quick brown fox jumps over the lazy dog.";
-  //  echo str_replace($vowels, $replace, $subject), PHP_EOL;
+   $vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+   $replace = '_';
+   $subject = "The quick brown fox jumps over the lazy dog.";
+   echo str_replace($vowels, $replace, $subject), PHP_EOL;
 
 
 ?>
