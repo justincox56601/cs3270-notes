@@ -103,13 +103,13 @@
  * this method like strip slashes removes slashes but it also recognizes C based charters such as \r \n \t
  */
 
- $str = "I can't help you with that";
- $slashes = addslashes($str);
- $cSlashes = addcslashes($str, "cn");
+//  $str = "I can't help you with that";
+//  $slashes = addslashes($str);
+//  $cSlashes = addcslashes($str, "cn");
 
- echo $str, PHP_EOL;
- echo $slashes, PHP_EOL;
- echo $cSlashes, PHP_EOL;
+//  echo $str, PHP_EOL;
+//  echo $slashes, PHP_EOL;
+//  echo $cSlashes, PHP_EOL;
  
 
 //  //typical useage example
