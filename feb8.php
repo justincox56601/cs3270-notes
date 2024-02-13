@@ -122,7 +122,7 @@
  * last class we talked about how the foreach sholuldn't be used to modify array elements.  But I lied. inside of foreach loops we need to use the reference operator if we want to make changes.  If you remember the reference or alias (&) operator makes the the new varaible an alias (sharing the same memory location) as the original.  Look at the example below to see it in action
  */
 
-//  //using numeric indexes
+ //using numeric indexes
 //  $test = [1,2,3,4,5];
 //  echo 'Before', PHP_EOL;
 //  print_r($test);
