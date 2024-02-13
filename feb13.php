@@ -256,16 +256,16 @@
  * extract is a method that will take all of the key/value pairs in an associative array and turn them into individual variables where the variable name is the key and the value is the value
  */
 
- $ex = [
-    'make'=>'ford',
-    'model' => 'mustang',
-    'rating' => 5
- ];
+//  $ex = [
+//     'make'=>'ford',
+//     'model' => 'mustang',
+//     'rating' => 5
+//  ];
 
- extract($ex);
- print_r($ex);
- echo $make, PHP_EOL;
- echo $model, PHP_EOL;
- echo $rating, PHP_EOL;
+//  extract($ex);
+//  print_r($ex);
+//  echo $make, PHP_EOL;
+//  echo $model, PHP_EOL;
+//  echo $rating, PHP_EOL;
 
  ?>
