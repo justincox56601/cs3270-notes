@@ -152,6 +152,26 @@
 // print_r($pets);
 
 /**
+ * array_intersect(array $needle, array ...$haystacks):array
+ * this method takes a minimum of 2 arrays and returns an array containing all of the elements in the $needle that are also present in the $haystacks.
+ * 
+ * array_intersect_assoc(array $needle, array ...$haystacks):array
+ * Same as array_intersect but checks for key - value pairs.
+ */
+
+// $needle = [0,3,6,9,12];
+// $haystack = [0,2,4,6,8,10];
+// $h2 = [6, 12];
+// $h3 = [12, 15, 21];
+// print_r(array_intersect($needle, $haystack));  //returns [0,6] because they are in both arrays
+// print_r(array_intersect($needle, $haystack, $h2)); // only returns [6] since that is the only element in ALL of the arrays
+// print_r(array_intersect($needle, $haystack, $h3)); // returns an empty array because there are no elements that are in ALL of the arrays.
+
+// $array1 = ["a" => "green", "b" => "brown", "c" => "blue", "red"];
+// $array2 = ["a" => "green", "b" => "yellow", "blue", "red"];
+// print_r(array_intersect_assoc($array1, $array2)); //only returns [a]=>'green' because that is the only element the same in both arrays.  'red' is not returned because in $array1 its index is 0, while in $array2 its index is 1;
+
+/**
  * Modifying arrays
  * unset(mixed $var):void - deletes the $var from memory.  Not array specific
  * array_pop(array $array): mixed - removes and returns the last element of the array.  the original array is shortened by 1 element
