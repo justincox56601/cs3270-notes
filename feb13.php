@@ -24,10 +24,10 @@
  * 
  */
 
-//  $colors = ['red', 'Blue', 'Yellow', 'green'];
-//  $strNums =['one', 'two', 'three', 'four'];
-//  $numNums =[43, 10, 19, 7, 2];
-//  $oranges = ['orange4', 'orange2', 'orange10', 'orange20'];
+ $colors = ['red', 'Blue', 'Yellow', 'green'];
+ $strNums =['one', 'two', 'three', 'four'];
+ $numNums =[43, 10, 19, 7, 2];
+ $oranges = ['orange4', 'orange2', 'orange10', 'orange20'];
 
 //  print_r(sort($colors)); //why does this print out a 1?  why not the array?
 // sort($colors); //base useage  alphabetical ascending, 
@@ -90,7 +90,7 @@
 // print_r($assocArr); // what just happened here?
 // asort($assocArr);
 // print_r($assocArr); //why is it still not working?
-//comment out the first sort and print on lins 88 and 89.  Now what happens?
+// comment out the first sort and print on lins 88 and 89.  Now what happens?
 
 // ksort($assocArr); //now I am sorting by the key instead of the value
 // print_r($assocArr);
@@ -138,7 +138,9 @@
 
 // $pets = ['cat', 'dog', 'fish', 'lizard', 'spider'];
 // print_r(array_rand($pets));
+// echo PHP_EOL;
 // print_r(array_rand($pets, 1));
+// echo PHP_EOL;
 // print_r(array_rand($pets, 2));
 
 /**
@@ -205,7 +207,7 @@
 // print_r($base);
 
 // array_splice($base, -2, 1); //removing the second item from the end
-// print_r($base)
+// print_r($base);
 
 // array_splice($base, 2, 0, 2); //not removing anything, adding the number 2 at the second index
 // print_r($base);
@@ -270,6 +272,7 @@
 // echo ($arrA == $arrC) ? 'true' : 'false', PHP_EOL; 
 // echo ($arrA === $arrC) ? 'true' : 'false', PHP_EOL; //equality - are the two arrays equal?  same key/value pairs in the same order
 // echo ($arrA !== $arrC) ? 'true' : 'false', PHP_EOL; //not operator works here as well
+// echo ($arrA <> $arrC) ? 'true' : 'false', PHP_EOL; //not operator works here as well
 
 /**
  * extract()
