@@ -6,41 +6,41 @@
  * 
  */
 
-class Car{ //class keyword tells php you are defining a class.  class name must be capitalized.
-    private $_vinNumber; // private properties are ONLY accessible from within this class
-    protected $_engine; //proected properties are only accessible within this class AND inherited classes
-    public $numberOfDoors; //public properties are freely accessible
+// class Car{ //class keyword tells php you are defining a class.  class name must be capitalized.
+//     private $_vinNumber; // private properties are ONLY accessible from within this class
+//     protected $_engine; //proected properties are only accessible within this class AND inherited classes
+//     public $numberOfDoors; //public properties are freely accessible
 
-    function __construct(int $vin){ //constructor uses the dunder prefix
-        $this->_vinNumber = $vin; //setting a property via passed in param
-        $this->numberOfDoors = 4; //directly assigning property value
-        $this->_set_engine(); //calling class methods from inside constructor
-        //NOTICE how $this  is used.  the $ goes with the $this NOT the property or function name
-        //NOTICE php classes use the arrow accessor ->  instead of the dot like in other languages.
-    }
+//     function __construct(int $vin){ //constructor uses the dunder prefix
+//         $this->_vinNumber = $vin; //setting a property via passed in param
+//         $this->numberOfDoors = 4; //directly assigning property value
+//         $this->_set_engine(); //calling class methods from inside constructor
+//         //NOTICE how $this  is used.  the $ goes with the $this NOT the property or function name
+//         //NOTICE php classes use the arrow accessor ->  instead of the dot like in other languages.
+//     }
 
-    function get_vin_number():int{ //all functions need to use the function keyword
-        return $this->_vinNumber;
-    }
+//     function get_vin_number():int{ //all functions need to use the function keyword
+//         return $this->_vinNumber;
+//     }
 
-    public function calc_gas_mileage(float $currentGas):float{ //functions have accessors as well.  default is public
-        $currentMileage = $this->_gas_mileage_calc($currentGas);
-        //do some math
-        return $currentMileage;
-    }
+//     public function calc_gas_mileage(float $currentGas):float{ //functions have accessors as well.  default is public
+//         $currentMileage = $this->_gas_mileage_calc($currentGas);
+//         //do some math
+//         return $currentMileage;
+//     }
 
-    protected function _gas_mileage_calc(float $gas):int{ //protected functions same as protected properties
-        //do some math
-        return 4;
-    }
+//     protected function _gas_mileage_calc(float $gas):int{ //protected functions same as protected properties
+//         //do some math
+//         return 4;
+//     }
 
-    private function _set_engine():void{ //private functions same as private properties
-        $this->_engine = '440 bigblock'; 
-    }
-}
+//     private function _set_engine():void{ //private functions same as private properties
+//         $this->_engine = '440 bigblock'; 
+//     }
+// }
 
-$jetta = new Car(1235); //objects need to be instantiated with the 'new' keyword
-$miata =new Car(5567); //multiple objects can be made from the same class.  These are distinct from eachother
+// $jetta = new Car(1235); //objects need to be instantiated with the 'new' keyword
+// $miata =new Car(5567); //multiple objects can be made from the same class.  These are distinct from eachother
 // echo $jetta->get_vin_number(), PHP_EOL; //arrow accessor is used to call class methods here too
 // echo $miata->get_vin_number(), PHP_EOL; //these are difference because these are two separate instances of the same class
 // echo $jetta->numberOfDoors, PHP_EOL; //easy access to public properites and methods
@@ -126,5 +126,91 @@ $miata =new Car(5567); //multiple objects can be made from the same class.  Thes
  * 9) instantiate the class, call the get_move() method on two pieces that are in the class, and one that isn't.  Show me when you are done.
  */
 
+ class Employee{
+	private $_name;
+	private $_id;
+	private $_salary;
+
+	function __construct(string $name, int $id){
+		$this->_name = $name;
+		$this->_id = $id;
+	}
+
+	public function get_name():string{
+		return $this->_name;
+	}
+
+	public function set_name(string $name):void{
+		$this->_name = $name;
+	}
+
+	public function get_id():int{
+		return $this->_id;
+	}
+
+	public function set_id(int $id):void{
+		$this->_id = $id;
+	}
+
+	public function get_salary():float{
+		return $this->_salary;
+	}
+
+	public function set_salary(float $amount):void{
+		$this->_salary = $amount;
+	}
+
+	public function give_raise(float $amount):void{
+		$this->_salary += $amount;
+	}
+
+	public function show_stats():string{
+		return "name: $this->_name\nid: $this->_id\nsalary: $this->_salary";
+	}
+ }
+
+ $Beth = new Employee("Beth", 113);
+ $Jenny = new Employee("Jenny", 125);
+ $Jordan = new Employee("Jordan", 888);
+
+ $Beth->set_salary(125000);
+ $Jenny->set_salary(125000);
+ $Jordan->set_salary(125000);
+ 
+ $Beth->give_raise(10000);
+
+ echo $Beth->show_stats(), PHP_EOL;
+ echo $Jenny->show_stats(), PHP_EOL;
+ echo $Jordan->show_stats(), PHP_EOL;
+
+ class ChessPiece{
+	private $_pieces;
+
+	function __construct(){
+		$this->_init_pieces();
+	}
+
+	private function _init_pieces():void{
+		$this->_pieces = [
+			'pawn' => "can only move one space forward",
+			'rook' => "moves in a straight line",
+			'knight' => "moves in an L shape.  2 forward, 1 sideways",
+			'bishop' => "moves diagonal",
+			'queen' => "can move straight or diagonal",
+			'king' => "can move 1 square in any direction",
+		];
+	}
+
+	public function get_move(string $move):string{
+		$move = strtolower($move);
+
+		return (array_key_exists($move, $this->_pieces))? $this->_pieces[$move] : "That is not a chess peice";
+	}
+ }
+
+ $chessPiece = new ChessPiece();
+ echo $chessPiece->get_move('knight'), PHP_EOL;
+ echo $chessPiece->get_move('Queen'), PHP_EOL;
+ echo $chessPiece->get_move('spwan'), PHP_EOL;
  
 ?>
