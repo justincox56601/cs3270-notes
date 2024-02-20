@@ -41,12 +41,12 @@ class Car{ //class keyword tells php you are defining a class.  class name must 
 
 $jetta = new Car(1235); //objects need to be instantiated with the 'new' keyword
 $miata =new Car(5567); //multiple objects can be made from the same class.  These are distinct from eachother
-// echo $jetta->get_vin_number(), PHP_EOL; //arrow accessor is used to call class methods here too
-// echo $miata->get_vin_number(), PHP_EOL; //these are difference because these are two separate instances of the same class
+//echo $jetta->get_vin_number(), PHP_EOL; //arrow accessor is used to call class methods here too
+//echo $miata->get_vin_number(), PHP_EOL; //these are difference because these are two separate instances of the same class
 // echo $jetta->numberOfDoors, PHP_EOL; //easy access to public properites and methods
 // echo $miata->_vinNumber, PH_EOL; //this causes a fatal error because you cannot access private or protected properties / methods from outside of the class itself.
-// echo get_class($jetta), PHP_EOL; //display class name
-// print_r(get_declared_classes()); // displays all of the classes that are currently in use in the current script
+//echo get_class($jetta), PHP_EOL; //display class name
+//print_r(get_declared_classes()); // displays all of the classes that are currently in use in the current script
 
 /**
  * SOLID principles with object oriented programming
