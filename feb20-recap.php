@@ -3,7 +3,7 @@
  * php supports object inheritance, polymoprhism, abstract classes, and interfaces.
  */
 
-class Parent{
+class Parents{
 	private $_id;  
 	protected $_familyName; 
 	public $firstName; 
@@ -27,7 +27,7 @@ class Parent{
 	}
 }
 
-class Child extends Parent{ 						//extends is the keyword for inheriting form a parent class
+class Child extends Parents{ 						//extends is the keyword for inheriting form a parent class
 	private $_favoriteDinosaur; 					//child class ONLY needs to declare properties specific to it.
 													//NOTE: private properties ARE NOT inherited.  
 													//ONLY public and protected.
