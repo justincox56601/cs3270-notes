@@ -77,7 +77,7 @@ interface iInterface{								//interfaces are like mini abstract classes.
 													//MUST implement the interface methods
 													//the abstract keyword is assumed and not needed in interface
 class MyClass implements iInterface{				//definitions
-	__construct(){}
+	function __construct(){}
 
 	public function public_method():void{			
 		//do public stuff							
