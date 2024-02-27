@@ -94,7 +94,7 @@
 // 	}
 
 // 	abstract public function deal_damage():void;
-// 	abstract public function receive_damage(float $amount):void;
+// 	abstract public function receive_damage():void;
 // }
 
 /**
@@ -206,3 +206,55 @@
  * then reuse the damge controller function from above as a free method and use player and enemy as the passed in parameters.
  * 
  */
+
+ abstract class Character{
+	protected $_name;
+	protected $_level;
+	protected $_class;
+
+	function Character($name, $level, $class){
+		$this->_name = $name;
+		$this->_level = $level;
+		$this->_class = $class;
+	}
+
+    public function show_stats():void{
+        echo "name: {$this->_name}\nclass: {$this->_class}\nlevel: {$this->_level}\n";
+    }
+}
+
+interface iDealDamage{
+	public function deal_damage():void; 
+}
+
+interface iReceiveDamage{
+	public function receive_damage(float $amount):void;
+}
+
+class Player extends Character implements iDealDamage, iReceiveDamage{
+    function Player($name, $level, $class){
+        parent::__construct($name, $level, $class);
+    }
+
+    public function deal_damage():void{
+        echo "Player does damage\n";
+    }
+
+    public function receive_damage():void{
+        echo "Player takes damage\n";
+    }
+}
+
+class Enemy extends Character implements iDealDamage, iReceiveDamage{
+    function Enemy($name, $level, $class){
+        parent::__construct($name, $level, $class);
+    }
+
+    public function deal_damage():void{
+        echo "Enemy does damage\n";
+    }
+
+    public function receive_damage():void{
+        echo "Enemy takes damage\n";
+    }
+}
