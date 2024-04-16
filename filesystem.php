@@ -165,15 +165,15 @@
  * lets extend this a little bit and make it a bit more useful
  */
 
- $dir = __DIR__ .'/filesystem/jobs';
- $files = array_diff(scandir($dir), array('.', '..'));
+//  $dir = __DIR__ .'/filesystem/jobs';
+//  $files = array_diff(scandir($dir), array('.', '..'));
  
- foreach($files as $file){
-    $file = substr($file, 0, strlen('.php'));
-    include_once($dir . '/' . $file . '.php');
-    $job = new $file();
-    $job->run();
- }
+//  foreach($files as $file){
+//     $file = substr($file, 0, strlen('.php'));
+//     include_once($dir . '/' . $file . '.php');
+//     $job = new $file();
+//     $job->run();
+//  }
 
 /**
  * IN CLASS ASSIGNMENT
