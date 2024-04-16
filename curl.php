@@ -28,14 +28,14 @@
  * Lets take a look at a basic example using the free open API JsonPlaceholder
  */
 
-// $url ='https://jsonplaceholder.typicode.com/posts';
-// $ch = curl_init($url);
-// curl_setopt($ch, CURLOPT_HEADER, 0); //doesn't include the header as part of the repsonse
-// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); //sets the return value as a string instead of just echoing it directly
-// $response = curl_exec($ch); //response is a string
-// curl_close($ch);
-// $response = json_decode($response, true); //json_decode(string $json, true) will convert a json string into an array if the true flag is present.
-// print_r($response);
+$url ='https://jsonplaceholder.typicode.com/posts';
+$ch = curl_init($url);
+curl_setopt($ch, CURLOPT_HEADER, 0); //doesn't include the header as part of the repsonse
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); //sets the return value as a string instead of just echoing it directly
+$response = curl_exec($ch); //response is a string
+curl_close($ch);
+$response = json_decode($response, true); //json_decode(string $json, true) will convert a json string into an array if the true flag is present.
+print_r($response);
 
 /**
  * explore on your own at https://jsonplaceholder.typicode.com/
