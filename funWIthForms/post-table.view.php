@@ -1,10 +1,10 @@
-<table>
+<table class='blog-table'>
     <tr>
         <th></th>
         <th></th>
         <th>Title</th>
         <th>Excerpt</th>
-        <th>category</th>
+        <th>Category</th>
     </tr>
     <?php foreach($tablePosts as $post):?>
         <tr>

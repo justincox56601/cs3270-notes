@@ -1,0 +1,94 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 4rem;
+}
+
+p{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.form-container{
+    margin-bottom: 2rem;
+}
+
+.form-container .form-title{
+    font-size: 1.75rem;
+    font-weight:bold;
+    margin-bottom:0;
+}
+
+.form-container .form-input{
+    width: 80vw;
+    margin-bottom: 1rem;
+    border: 1px solid green;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    padding: 10px;
+}
+
+.form-container textarea.form-input{
+   height: 40vh;
+   resize:none;
+}
+
+.form-container input[type="radio"]{
+    font-size: 1.25rem;
+}
+
+.button,
+.form-container input[type="submit"]{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: green;
+    background-color: transparent;
+    border: 1px solid green;
+    border-radius: 8px;
+    transition: 200ms ease;
+    text-decoration:none;
+}
+
+.button:hover,
+.form-container input[type="submit"]:hover{
+    color: white;
+    background-color: green; 
+}
+
+.blog-table{
+    width:100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+.blog-table td,
+.blog-table th{
+    padding:10px;
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+.blog-table tr:nth-child(odd){
+    background-color: #b1c5b6;
+}
+
+.blog-post-title{
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.blog-post-content{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.blog-post-meta{
+    font-size: 1rem;
+    font-weight: thin;
+}

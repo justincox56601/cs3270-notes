@@ -2,17 +2,17 @@
     $category = $formPost->category ?? '';
 ?>
 <form action="" method="post">
-    <div>
-        <p>Title:</p>
+    <div class='form-container'>
+        <p class="form-title">Title:</p>
         <div>
-            <input type="text" name="blogTitle" id="blog-title" value="<?=$formPost->title ??''?>">
+            <input class="form-input" type="text" name="blogTitle" id="blog-title" value="<?=$formPost->title ??''?>">
         </div>
-        <p>Content:</p>
+        <p class="form-title">Content:</p>
         <div>
-            <textarea name="blogContent" id="blog-content" cols="30" rows="10"><?=$formPost->content ??''?></textarea>
+            <textarea class="form-input" name="blogContent" id="blog-content" ><?=$formPost->content ??''?></textarea>
         </div>
         <div>
-            <p>Category</p>
+            <p class="form-title">Category</p>
             <div>
                 <input type="radio" name="blogCategory" id="blog-category-uncategorized" value="uncategorized" checked='checked'>
                 <label for="blog-category-uncategorized">uncategorized</label>
